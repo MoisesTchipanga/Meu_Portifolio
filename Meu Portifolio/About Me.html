@@ -4,45 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="about Me.css">
-    <title>About Me</title>
+    <title>About Me - Moisés Tchipanga</title>
+    <style>
+        /* Efeitos personalizados além do animate.css */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(79, 193, 233, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(79, 193, 233, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(79, 193, 233, 0); }
+        }
+        
+        @keyframes text-wave {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(5px); }
+        }
+    </style>
 </head>
 <body>
     <header class="header animate__animated animate__fadeInDown">
-        <div class="container">
+        <div class="containerReader">
             <div class="logo animate__animated animate__pulse animate__infinite animate__slower">Moisés Tchipanga</div>
             <nav class="menu">
                 <a href="index.html">Home</a>
-                <a href="About Me.html"  class="active">About Me</a>
-                <a href="Portifolio.html"> My Portfolio</a>
-                <a href="Contact.html"> My Contact</a>
+                <a href="About Me.html" class="active">About Me</a>
+                <a href="Portifolio.html">My Portfolio</a>
+                <a href="Contact.html">My Contact</a>
             </nav>
         </div>
     </header>
+    
     <main>
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text animate__animated animate__fadeInLeft">
-                        <h5>Moisés Massaquia Tchipanga</h5>
-                        <p>É um jovem de 22 anos de idade, tecnico profissional de Hardware, estudante de Engenharia Informática frequentando o 2º Ano no Instituto Superior Politecnico do Zango polo Luanda Sul.</p>
-                        <p>Ambiciado em ser um Engenheiro de elite, um profissional destacado no seu habitat natuaral que é a Tecnologia, almejando alcançar a gradução de programador <strong>FULL STACK</strong>, para ser admirado, solicitado e poder enriquecer com as soluções que criará para pessoas, comunidades e empresas.</p>
-                        <p>Apaixonado pela tecnologia e amante da inovação, Moisés Tchipanga vêm ambarcando em projetos inovadores e competentes para se fixar no mundo tão competitivo que é o mercado de Tecnologia de Angolano. Actualmente atuando como programador <strong>Front-end</strong> no projeto da <strong>TechMinds,</strong> que alberga Jovens brilhantes e inovadores, em uma criação de uma plataforma sólida para o mercado imobiliario.</p>
-                        <div class="hero-buttons">
-                            <a href="Portifolio.html" class="btn-primary pulse-on-hover">VER PORTFÓLIO</a>
-                            <a href="Contact.html" class="btn-secondary slide-on-hover">CONTATO</a>
+                        <h5 class="animate__animated animate__fadeIn animate__delay-1s">Moisés Massaquia Tchipanga</h5>
+                        
+                        <!-- Parágrafos com efeitos individuais -->
+                        <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                            <i class="fas fa-user-graduate"></i> É um jovem de 22 anos de idade, técnico profissional de Hardware, estudante de Engenharia Informática frequentando o 2º Ano no Instituto Superior Politécnico do Zango pólo Luanda Sul.
+                        </p>
+                        
+                        <p class="animate__animated animate__fadeInUp animate__delay-1-5s">
+                            <i class="fas fa-bullseye"></i> Ambiciona ser um Engenheiro de elite, um profissional destacado no seu habitat natural que é a Tecnologia, almejando alcançar a graduação de programador <strong class="highlight-text">FULL STACK</strong>, para ser admirado, solicitado e poder enriquecer com as soluções que criará para pessoas, comunidades e empresas.
+                        </p>
+                        
+                        <p class="animate__animated animate__fadeInUp animate__delay-2s">
+                            <i class="fas fa-heart"></i> Apaixonado pela tecnologia e amante da inovação, Moisés Tchipanga vem embarcando em projetos inovadores e competentes para se fixar no mundo tão competitivo que é o mercado de Tecnologia Angolano. Atualmente atuando como programador <strong class="highlight-text">Front-end</strong> no projeto da <strong class="highlight-text">TechMinds</strong>, que alberga Jovens brilhantes e inovadores, na criação de uma plataforma sólida para o mercado imobiliário.
+                        </p>
+                        
+                        <!-- Seção de habilidades -->
+                        <div class="skills-section animate__animated animate__fadeInUp animate__delay-2-5s">
+                            <h6><i class="fas fa-code"></i> Habilidades Técnicas:</h6>
+                            <div class="skills-container">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Hardware</span>
+                                <span class="skill-tag">Front-end</span>
+                                <span class="skill-tag">UI/UX</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
+                            <a href="Portifolio.html" class="btn-primary pulse-on-hover">
+                                <i class="fas fa-briefcase"></i> VER PORTFÓLIO
+                            </a>
+                            <a href="Contact.html" class="btn-secondary slide-on-hover">
+                                <i class="fas fa-envelope"></i> CONTATO
+                            </a>
                         </div>
                     </div>
+                    
                     <div class="hero-image animate__animated animate__fadeInRight">
-                        <div class="profile-img-container">
+                        <div class="profile-img-container animate__animated animate__pulse animate__infinite animate__slower">
                             <img src="imagens/Minha_foto.jpg" alt="Moisés Tchipanga" class="profile-img">
                             <div class="border-animation"></div>
+                            <div class="floating-icons">
+                                <i class="fas fa-code icon-float" style="top: 10%; left: 5%; animation-delay: 0s;"></i>
+                                <i class="fas fa-laptop-code icon-float" style="top: 70%; left: 80%; animation-delay: 0.5s;"></i>
+                                <i class="fas fa-microchip icon-float" style="top: 30%; left: 85%; animation-delay: 1s;"></i>
+                                <i class="fas fa-server icon-float" style="top: 80%; left: 15%; animation-delay: 1.5s;"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
+    <script>
+        // Efeito de onda no texto
+        document.querySelectorAll('.highlight-text').forEach(text => {
+            text.addEventListener('mouseover', function() {
+                this.style.animation = 'text-wave 0.8s ease';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 800);
+            });
+        });
+        
+        // Animação de ícones flutuantes
+        const floatingIcons = document.querySelectorAll('.icon-float');
+        floatingIcons.forEach(icon => {
+            icon.style.animation = `float 4s ease-in-out infinite ${icon.style.animationDelay}`;
+        });
+        
+        // Efeito de digitação nos títulos (opcional)
+        const titles = document.querySelectorAll('h5, h6');
+        titles.forEach(title => {
+            title.style.opacity = '0';
+            title.style.animation = 'fadeIn 1s forwards';
+        });
+    </script>
 </body>
 </html>
