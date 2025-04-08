@@ -4,20 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Contact.css">
-    <title>Contacts</title>
+    <title>Contact - Moisés Tchipanga</title>
 </head>
 <body>
-    <header class="header animate__animated animate__fadeInDown">
+    <!-- Header consistente -->
+    <header class="header">
         <div class="container">
-            <div class="logo animate__animated animate__pulse animate__infinite animate__slower">Moisés Tchipanga</div>
+            <div class="logo">Moisés Tchipanga</div>
             <nav class="menu">
                 <a href="index.html">Home</a>
                 <a href="About Me.html">About Me</a>
-                <a href="Portifolio.html"> My Portfolio</a>
-                <a href="Contact.html"class="active"> My Contact</a>
+                <a href="Portifolio.html">My Portfolio</a>
+                <a href="Contact.html" class="active">My Contact</a>
             </nav>
         </div>
     </header>
+
+    <main>
+        <!-- Seção Hero de Contato -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="contact-title">Vamos <span>Conversar</span></h1>
+                <p class="contact-subtitle">Estou disponível para oportunidades e colaborações. Envie sua mensagem!</p>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Formulário -->
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Seu Nome" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Seu Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Assunto">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <button type="submit" class="submit-btn">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Informações de Contato -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Localização</h3>
+                            <p>Viana,Luanda, Angola</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>moisestchipanga32@gmail.com</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3>Telefone</h3>
+                            <p>+244 924 473 168</p>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.238215381576!2d13.234415415338154!3d-8.814667893710747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f15cdc8b2d5d%3A0x3c3b1a3a3b1a3a3b!2sLuanda%2C%20Angola!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulação de envio
+            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
