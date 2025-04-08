@@ -242,6 +242,7 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Adicionado para responsividade */
 }
 
 .social-link {
@@ -254,6 +255,27 @@ body {
     justify-content: center;
     color: var(--text-color);
     transition: all 0.3s;
+}
+
+/* Cores específicas para cada rede social */
+.social-link:nth-child(1) { background: rgba(37, 211, 102, 0.1); } /* WhatsApp */
+.social-link:nth-child(1):hover { background: #25D366; } 
+
+.social-link:nth-child(2) { background: rgba(66, 103, 178, 0.1); } /* Facebook */
+.social-link:nth-child(2):hover { background: #4267B2; }
+
+.social-link:nth-child(3) { background: rgba(0, 119, 181, 0.1); } /* LinkedIn */
+.social-link:nth-child(3):hover { background: #0077B5; }
+
+.social-link:nth-child(4) { background: rgba(0, 0, 0, 0.1); } /* GitHub */
+.social-link:nth-child(4):hover { background: #000000; }
+
+.social-link:nth-child(5) { background: rgba(29, 161, 242, 0.1); } /* Twitter */
+.social-link:nth-child(5):hover { background: #1DA1F2; }
+
+.social-link:nth-child(6) { background: rgba(225, 48, 108, 0.1); } /* Instagram */
+.social-link:nth-child(6):hover { 
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .social-link:hover {
