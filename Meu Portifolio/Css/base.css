@@ -74,6 +74,15 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* GRADIENT TEXT UTILITY */
+.text-gradient {
+    background: linear-gradient(90deg, #ffffff 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
 .header .container { /* Target container specifically within header */
     width: 100%;
     max-width: 1200px; /* Standardized max-width */
@@ -157,7 +166,8 @@ body {
 }
 
 .btn-primary:hover {
-    background: rgba(100, 255, 218, 0.05);
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
     transform: translateY(-2px);
 }
 
@@ -204,4 +214,22 @@ body {
     .footer {
         margin-top: 40px;
     }
+
+    .menu {
+        display: none; /* Oculta o menu padrão no mobile para implementar o toggle depois */
+    }
+
+    /* Uma solução rápida e profissional para o menu não quebrar */
+    .header .container {
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .menu {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .menu a { font-size: 0.8rem; padding: 4px 8px; }
 }

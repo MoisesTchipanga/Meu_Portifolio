@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Moisés Tchipanga - Engenheiro de Software e Especialista em Hardware. Desenvolvendo soluções web de alto impacto.">
+    <meta property="og:title" content="Moisés Tchipanga | Portfólio">
+    <meta property="og:description" content="Confira meus projetos e expertise em desenvolvimento Front-end e Hardware.">
+    <meta property="og:image" content="imagens/Eu.jpeg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="Css/style.css">
     <title>Moisés Tchipanga - Portfólio</title>
@@ -14,7 +19,7 @@
             <div class="logo">M.Tchipanga</div>
             <nav class="menu">
                 <a href="index.html" class="active">Home</a>
-                <a href="About Me.html">About Me</a>
+                <a href="About%20Me.html">About Me</a>
                 <a href="Portifolio.html">Portfolio</a>
                 <a href="Contact.html">Contact</a> 
             </nav>
@@ -31,9 +36,9 @@
                     </div>
                     <div class="hero-text">
                         <h5 style="color: var(--primary-color); font-family: monospace;">Hi, my name is</h5>
-                        <h1 style="font-size: 4rem; color: #e6f1ff;">Moisés Tchipanga.</h1> 
-                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1;">I build things for the web.</h2> 
-                        <p style="max-width: 540px; margin-top: 20px;">Sou um desenvolvedor focado em construir experiências digitais excepcionais. Atualmente, estudo Engenharia Informática e atuo na intersecção entre Hardware e Software.</p> 
+                        <h1 style="font-size: 4rem; color: #e6f1ff;" class="text-gradient">Moisés Tchipanga.</h1> 
+                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1;">I build impactful web solutions.</h2> 
+                        <p style="max-width: 540px; margin-top: 20px;">Como estudante de Engenharia Informática e especialista em Hardware, transformo ideias em experiências digitais robustas. Minha paixão reside em desenvolver soluções web inovadoras que impulsionam o progresso e a eficiência.</p> 
                         <div class="hero-buttons">
                             <a href="Portifolio.html" class="btn-primary">Check out my work!</a>
                         </div>
@@ -53,14 +58,18 @@
                 });
             });
         });
-    </script>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-line"></div>
-            <p>Designed & Built by <span>Moisés Tchipanga</span></p>
-            <p class="footer-copy">&copy; 2024 Luanda, Angola. All rights reserved.</p>
-        </div>
-    </footer>
+        // Efeito Parallax Suave
+        const profileContainer = document.querySelector('.profile-img-container');
+        window.addEventListener('scroll', () => {
+            const scrollValue = window.scrollY;
+            if (profileContainer && window.innerWidth > 768) {
+                // Multiplicador 0.12 para um movimento sutil e elegante
+                profileContainer.style.transform = `translateY(${scrollValue * 0.12}px)`;
+            } else if (profileContainer) {
+                profileContainer.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
 </body>
 </html>

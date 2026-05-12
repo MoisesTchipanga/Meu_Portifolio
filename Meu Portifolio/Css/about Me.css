@@ -87,6 +87,7 @@
     width: 400px;
     height: auto; /* Altura automática para manter proporção */
     flex-shrink: 0; /* Não encolher a imagem */
+    will-change: transform;
 }
 
 .profile-img {

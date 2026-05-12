@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Css/about Me.css">
+    <link rel="stylesheet" href="Css/about%20Me.css">
     <title>About Me - Moisés Tchipanga</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
             <div class="logo">M.Tchipanga</div>
             <nav class="menu">
                 <a href="index.html">Home</a>
-                <a href="About Me.html" class="active">About Me</a>
+                <a href="About%20Me.html" class="active">About Me</a>
                 <a href="Portifolio.html">My Portifolio</a>
                 <a href="Contact.html">Contact</a>
             </nav>
@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="career-title">Software Engineering Student & Hardware Specialist</h1>
+                        <h1 class="career-title text-gradient">Software Engineering Student & Hardware Specialist</h1>
                         
                         <p>
                             Com 22 anos e uma base sólida em manutenção de hardware, hoje foco meu desenvolvimento acadêmico no 2º ano de Engenharia Informática (ISP Zango). Minha atuação como desenvolvedor Front-end na <strong>TechMinds</strong> me permite unir a precisão técnica da infraestrutura com a criatividade do software, buscando sempre soluções <strong>Full Stack</strong> de alto impacto para o mercado tecnológico.
@@ -61,7 +61,7 @@
                     
                     <div class="hero-image">
                         <div class="profile-img-container">
-                            <img src="imagens/Eu02.jpeg" alt="Moisés Tchipanga" class="profile-img">
+                            <img src="imagens/Eu.jpeg" alt="Moisés Tchipanga" class="profile-img">
                         </div>
                     </div>
                 </div>
@@ -76,6 +76,19 @@
             <p class="footer-copy">&copy; 2024 Luanda, Angola. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Efeito Parallax Suave para About Me
+        const profileContainer = document.querySelector('.profile-img-container');
+        window.addEventListener('scroll', () => {
+            const scrollValue = window.scrollY;
+            if (profileContainer && window.innerWidth > 768) {
+                profileContainer.style.transform = `translateY(${scrollValue * 0.1}px)`;
+            } else if (profileContainer) {
+                profileContainer.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
 
 </body>
 </html>
