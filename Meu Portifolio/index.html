@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="Css/style.css">
     <title>Moisés Tchipanga - Portfólio</title>
 </head>
 <body>
-    <header class="header animate__animated animate__fadeInDown"> 
+    <header class="header">
         <div class="container">
-            <div class="logo animate__animated animate__pulse animate__infinite animate__slower">Moisés Tchipanga</div>
+            <div class="logo">M.Tchipanga</div>
             <nav class="menu">
                 <a href="index.html" class="active">Home</a>
                 <a href="About Me.html">About Me</a>
-                <a href="Portifolio.html"> My Portifolio</a>
-                <a href="Contact.html"> My Contact</a>
+                <a href="Portifolio.html">Portfolio</a>
+                <a href="Contact.html">Contact</a> 
             </nav>
         </div>
     </header>
@@ -25,20 +24,18 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="hero-text animate__animated animate__fadeInLeft">
-                        <h5>OLÁ!</h5>
-                        <h1>Eu sou <span class="typing-animation"></span></h1>
-                        <p>Técnico de Hardware e estudante de Engenharia Informática. Muito Apaixonado pela tecnologia e amante da Inovação. <br><strong>BEM-VINDO AO MEU PORTFÓLIO!
-                        </strong></p>
-                        <div class="hero-buttons">
-                            <a href="Portifolio.html" class="btn-primary pulse-on-hover">SEE PORTFÓLIO</a>
-                            <a href="Contact.html" class="btn-secondary slide-on-hover">CONTACT</a>
+                    <div class="hero-image">
+                        <div class="profile-img-container">
+                            <img src="imagens/Eu.jpeg" alt="Moisés Tchipanga" class="profile-img">
                         </div>
                     </div>
-                    <div class="hero-image animate__animated animate__fadeInRight">
-                        <div class="profile-img-container">
-                            <img src="imagens/Minha_foto.jpg" alt="Moisés Tchipanga" class="profile-img">
-                            <div class="border-animation"></div>
+                    <div class="hero-text">
+                        <h5 style="color: var(--primary-color); font-family: monospace;">Hi, my name is</h5>
+                        <h1 style="font-size: 4rem; color: #e6f1ff;">Moisés Tchipanga.</h1> 
+                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1;">I build things for the web.</h2> 
+                        <p style="max-width: 540px; margin-top: 20px;">Sou um desenvolvedor focado em construir experiências digitais excepcionais. Atualmente, estudo Engenharia Informática e atuo na intersecção entre Hardware e Software.</p> 
+                        <div class="hero-buttons">
+                            <a href="Portifolio.html" class="btn-primary">Check out my work!</a>
                         </div>
                     </div>
                 </div>
@@ -46,16 +43,7 @@
         </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        // Efeito de digitação
-        new Typed('.typing-animation', {
-            strings: ["Moisés Tchipanga", "Desenvolvedor", "Técnico de Hardware","Inovador"],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
-
         // Efeito de scroll suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -66,5 +54,13 @@
             });
         });
     </script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-line"></div>
+            <p>Designed & Built by <span>Moisés Tchipanga</span></p>
+            <p class="footer-copy">&copy; 2024 Luanda, Angola. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

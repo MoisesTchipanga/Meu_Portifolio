@@ -2,30 +2,29 @@
 :root {
 }
 
-body {
-}
-
 /* Header */
 /* Conteúdo principal */
 .hero-content {
+    display: flex; /* Adicionado para layout flexível */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 80px 20px 100px; /* Ajustado para 80px para igualar a distância da Home */
 }
 
 .hero-text {
     flex: 1;
-    padding-right: 50px;
+    padding-right: 80px; /* Espaçamento entre texto e imagem */
 }
 
-.hero-text h5 {
-    font-size: 1.8rem;
+.hero-text h1.career-title {
+    font-size: 2.2rem;
     margin-bottom: 30px;
     color: var(--primary-color);
     position: relative;
+    line-height: 1.2;
 }
 
-.hero-text h5::after {
+.hero-text h1.career-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -38,15 +37,6 @@ body {
 .hero-text p {
     font-size: 1.1rem;
     margin-bottom: 25px;
-    position: relative;
-    padding-left: 30px;
-}
-
-.hero-text p i {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    color: var(--primary-color);
 }
 
 .highlight-text {
@@ -95,63 +85,25 @@ body {
 .profile-img-container {
     position: relative;
     width: 400px;
-    height: 400px;
+    height: auto; /* Altura automática para manter proporção */
+    flex-shrink: 0; /* Não encolher a imagem */
 }
 
 .profile-img {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    height: auto;
     object-fit: cover;
-    position: relative;
-    z-index: 2;
-    border: 5px solid rgba(79, 193, 233, 0.3);
-    box-shadow: 0 0 50px rgba(79, 193, 233, 0.3);
-    transition: transform 0.5s;
+    border-radius: 8px; /* Borda retangular sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img:hover {
-    transform: scale(1.05);
-}
-
-.border-animation {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border-radius: 50%;
-    border: 3px dashed var(--primary-color);
-    animation: spin 15s linear infinite;
-    opacity: 0.7;
-    z-index: 1;
-}
-
-.floating-icons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    pointer-events: none;
-}
-
-.icon-float {
-    position: absolute;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    opacity: 0.7;
-    z-index: 4;
+    transform: none; /* Remove hover effect */
 }
 
 /* Botões */
 .btn-primary, .btn-secondary {
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.4s;
+    /* Estilos herdados de base.css */
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -159,25 +111,19 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    box-shadow: 0 5px 15px rgba(79, 193, 233, 0.4);
+    /* Estilos herdados de base.css */
 }
 
 .btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(79, 193, 233, 0.6);
+    /* Estilos herdados de base.css */
 }
 
 .btn-secondary {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background: transparent;
+    /* Estilos herdados de base.css */
 }
 
 .btn-secondary:hover {
-    background: rgba(79, 193, 233, 0.1);
-    transform: translateY(-5px);
+    /* Estilos herdados de base.css */
 }
 
 /* Animações */
@@ -186,15 +132,9 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-@keyframes pulse-glow {
-    0% { box-shadow: 0 0 0 0 rgba(79, 193, 233, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(79, 193, 233, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(79, 193, 233, 0); }
+@media (max-width: 768px) {
+    .hero-content {
+        padding-top: 60px; /* Ajustado para coincidir com o comportamento responsivo da Home */
+    }
 }
-
-@keyframes text-wave {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(5px); }
-}
+/* Animações removidas para um visual mais profissional */

@@ -13,7 +13,7 @@
     <!-- Header com foto -->
     <header class="header">
         <div class="container">
-            <div class="logo">Moisés Tchipanga</div>
+            <div class="logo">M.Tchipanga</div>
             <nav class="menu">
                 <a href="index.html">Home</a>
                 <a href="About Me.html">About Me</a>
@@ -22,13 +22,12 @@
             </nav>
         </div>
     </header>
-
     <main>
         <!-- Seção Hero com efeito de digitação -->
         <section class="contact-hero">
             <div class="container">
                 <h1 class="contact-title">Vamos <span>Conversar</span></h1>
-                <p class="contact-subtitle typing-animation"></p>
+                <p class="contact-subtitle">Estou disponível para oportunidades e colaborações. Envie sua mensagem!</p>
             </div>
         </section>
 
@@ -36,6 +35,9 @@
         <!-- Seção de Contato -->
         <section class="contact-section">
             <div class="container">
+                <div class="contact-photo">
+                    <img src="imagens/Redes-contactos.jpg" alt="Redes de Contactos">
+                </div>
                 <div class="contact-grid">
                     <!-- Formulário -->
                     <div class="contact-form">
@@ -95,37 +97,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-photo">
-                    <img src="imagens/Redes-contactos.jpg" alt="Redes de Contactos">
-                    <div class="photo-border"></div>
-                </div> 
             </div>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        // Efeito de digitação
-        new Typed('.typing-animation', {
-            strings: [
-                "Estou disponível para oportunidades e colaborações. Envie sua mensagem!",
-                "Vamos criar algo incrível juntos!",
-                "Obrigado pelo seu interesse!"
-            ],
-            typeSpeed: 40,
-            backSpeed: 20,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|',
-            shuffle: false
-        });
-
-        // Efeito flutuante na foto do header
-        const headerPhoto = document.querySelector('.header-photo img');
-        function floatPhoto() {
-            headerPhoto.style.transform = `translateY(${Math.sin(Date.now()/800)*5}px)`;
-            requestAnimationFrame(floatPhoto);
-        }
-        floatPhoto();
-    </script>
 </body>
 </html>
