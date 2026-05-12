@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Css/about%20Me.css">
+    <link rel="stylesheet" href="Css/about-me.css">
+    <link rel="stylesheet" href="Css/about Me.css">
     <title>About Me - Moisés Tchipanga</title>
 </head>
 <body>
@@ -15,9 +16,9 @@
             <div class="logo">M.Tchipanga</div>
             <nav class="menu">
                 <a href="index.html">Home</a>
-                <a href="About%20Me.html" class="active">About Me</a>
-                <a href="Portifolio.html">My Portifolio</a>
-                <a href="Contact.html">Contact</a>
+                <a href="about-me.html" class="active">About Me</a>
+                <a href="portifolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -50,10 +51,10 @@
                             </div>
                         </div>
                         <div class="hero-buttons">
-                            <a href="Portifolio.html" class="btn-primary">
+                            <a href="portifolio.html" class="btn-primary">
                                 <i class="fas fa-briefcase"></i> VER PORTFÓLIO
                             </a>
-                            <a href="Contact.html" class="btn-secondary">
+                            <a href="contact.html" class="btn-secondary">
                                 <i class="fas fa-envelope"></i> CONTATO
                             </a>
                         </div>
@@ -61,7 +62,7 @@
                     
                     <div class="hero-image">
                         <div class="profile-img-container">
-                            <img src="imagens/Eu.jpeg" alt="Moisés Tchipanga" class="profile-img">
+                            <img src="assets/img/Eu.jpeg" alt="Moisés Tchipanga" class="profile-img">
                         </div>
                     </div>
                 </div>
@@ -73,11 +74,28 @@
         <div class="container">
             <div class="footer-line"></div>
             <p>Designed & Built by <span>Moisés Tchipanga</span></p>
-            <p class="footer-copy">&copy; 2024 Luanda, Angola. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 Luanda, Angola. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // Gerenciador de Transições de Página
+        document.querySelectorAll('.menu a, .hero-buttons a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                
+                // Apenas links internos e que não sejam âncoras na mesma página
+                if (href && !href.startsWith('#') && link.hostname === window.location.hostname) {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400); // Tempo deve coincidir com o CSS (0.4s)
+                }
+            });
+        });
+
         // Efeito Parallax Suave para About Me
         const profileContainer = document.querySelector('.profile-img-container');
         window.addEventListener('scroll', () => {

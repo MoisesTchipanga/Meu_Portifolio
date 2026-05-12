@@ -43,7 +43,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('imagens/tech-pattern.png') center/cover;
+    background: url('../assets/img/tech-pattern.png') center/cover;
     opacity: 0.05;
     z-index: -1;
 }

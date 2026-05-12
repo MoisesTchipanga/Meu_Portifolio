@@ -9,13 +9,16 @@ body {
 
 /* Seção de Introdução */
 .portfolio-intro {
-    padding: 100px 0 60px;
+    padding: 120px 0 60px;
     text-align: center;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #e6f1ff;
 }
 
 .section-title span {
@@ -29,11 +32,13 @@ body {
 
 /* Seções comuns */
 .skills-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
     gap: 15px;
+    color: #ccd6f6;
+    font-family: monospace;
 }
 
 .skills-title i {
@@ -53,13 +58,16 @@ body {
     border-radius: 15px;
     padding: 30px;
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+    box-shadow: 0 10px 40px -15px rgba(100, 255, 218, 0.2);
     border-color: var(--primary-color);
 } 
 
@@ -70,17 +78,7 @@ body {
 }
 
 .skill-level {
-    height: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 15px 0;
-    overflow: hidden;
-}
-
-.level-bar {
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 10px; 
+    display: none; /* Removido para estética mais adulta/senior */
 }
 
 /* Soft Skills */
@@ -95,7 +93,9 @@ body {
     background: var(--card-bg);
     border-radius: 15px;
     padding: 25px;
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    border-left: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
 }
 
 .soft-skill h3 {
@@ -104,6 +104,11 @@ body {
     gap: 10px;
     margin-bottom: 15px;
     color: var(--primary-color);
+}
+
+.soft-skill:hover {
+    background: rgba(100, 255, 218, 0.03);
+    transform: translateX(10px);
 }
 
 /* Linha do Tempo */
@@ -120,7 +125,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--primary-color);
+    background: var(--accent-color);
 }
 
 .timeline-item {
@@ -130,14 +135,15 @@ body {
 
 .timeline-date {
     position: absolute;
-    left: -30px;
+    left: -32px;
     top: 0;
-    background: var(--primary-color);
-    color: var(--secondary-color);
+    background: var(--accent-color);
+    color: var(--primary-color);
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: 600;
     font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
 }
 
 .timeline-content {
@@ -145,7 +151,7 @@ body {
     padding: 25px;
     border-radius: 10px;
     margin-left: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.05);
 }
 
 .timeline-content h3 {
@@ -172,12 +178,15 @@ body {
 .project-card {
     background: var(--card-bg);
     border-radius: 15px;
+    border: 1px solid rgba(100, 255, 218, 0.05);
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover {
     transform: translateY(-10px);
+    border-color: rgba(100, 255, 218, 0.3);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 }
 
 .project-image {
@@ -203,7 +212,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 82, 100, 0.7);
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +226,7 @@ body {
 }
 
 .project-link {
-    color: white;
+    color: var(--secondary-color);
     font-size: 1.5rem;
     background: var(--primary-color);
     width: 50px;
@@ -249,12 +259,13 @@ body {
 }
 
 .project-tags span {
-    background: rgba(79, 193, 233, 0.2);
+    background: rgba(100, 255, 218, 0.1);
     color: var(--primary-color);
     padding: 3px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 /* Responsividade */
