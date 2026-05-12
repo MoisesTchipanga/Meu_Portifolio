@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="Css/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Css/about-me.css">
-    <link rel="stylesheet" href="Css/about Me.css">
     <title>About Me - Moisés Tchipanga</title>
 </head>
 <body>
@@ -28,11 +27,12 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="career-title text-gradient">Software Engineering Student & Hardware Specialist</h1>
+                        <h1 class="career-title text-gradient"><span id="typewriter-about"></span></h1>
                         
                         <p>
-                            Com 23 anos, estou em formação no curso de Engenharia Informática no ISP Zango, onde continuo a desenvolver a minha base académica na área tecnológica, com foco em sistemas, programação e aplicação prática do conhecimento.
+                            Com 23 anos, estou no 3º Ano de Licenciatura no curso de Engenharia Informática no ISPOZANGO, onde continuo a desenvolver a minha base académica na área tecnológica, com foco em sistemas, programação e aplicação prática do conhecimento.
                         </p>
+                        <p>CEO da FPV Research Hub – Fazendo Por Você, onde lidero a estruturação e coordenação de iniciativas focadas no suporte académico. A minha atuação centra-se na organização de processos, gestão de conteúdos e aplicação de metodologias que visam apoiar estudantes na produção e desenvolvimento de trabalhos académicos com rigor e clareza.</p>
                         <p>
                             O meu percurso profissional inclui atuação na Kudika Digital, onde desempenho funções como Adjunto de Comercial e Marketing. Nesta posição, participo na gestão de processos comerciais, comunicação com clientes e apoio estratégico às atividades da empresa, contribuindo para a organização e desenvolvimento das operações no contexto digital.
                         </p>
@@ -78,7 +78,7 @@
                     
                     <div class="hero-image">
                         <div class="profile-img-container">
-                            <img src="assets/img/Eu.jpeg" alt="Moisés Tchipanga" class="profile-img">
+                            <img src="assets/img/Eu02.jpg" alt="Moisés Tchipanga" class="profile-img">
                         </div>
                     </div>
                 </div>
@@ -122,6 +122,44 @@
                 profileContainer.style.transform = 'translateY(0)';
             }
         });
+
+        // Efeito de Digitação para a página About Me (Mais lento)
+        const aboutTextElement = document.getElementById('typewriter-about');
+        const aboutPhrases = [
+            "CEO da FPV Research Hub – Fazendo Por Você",
+            "Adjunto de Comercial e Marketing na Kudika Digital",
+            "Docente de Educação Laboral e EVP",
+            "Estudante de Engenharia Informática (ISPOZANGO)"
+        ];
+        
+        let aboutPhraseIndex = 0;
+        let aboutCharIndex = 0;
+        let aboutIsDeleting = false;
+        let aboutTypeSpeed = 150; // Mais lento que a Home (que era 100)
+
+        function typeAbout() {
+            const currentPhrase = aboutPhrases[aboutPhraseIndex];
+            if (aboutIsDeleting) {
+                aboutTextElement.textContent = currentPhrase.substring(0, aboutCharIndex - 1);
+                aboutCharIndex--;
+                aboutTypeSpeed = 75;
+            } else {
+                aboutTextElement.textContent = currentPhrase.substring(0, aboutCharIndex + 1);
+                aboutCharIndex++;
+                aboutTypeSpeed = 150; 
+            }
+
+            if (!aboutIsDeleting && aboutCharIndex === currentPhrase.length) {
+                aboutIsDeleting = true;
+                aboutTypeSpeed = 3500; // Pausa longa para leitura de frases complexas
+            } else if (aboutIsDeleting && aboutCharIndex === 0) {
+                aboutIsDeleting = false;
+                aboutPhraseIndex = (aboutPhraseIndex + 1) % aboutPhrases.length;
+                aboutTypeSpeed = 600;
+            }
+            setTimeout(typeAbout, aboutTypeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', typeAbout);
     </script>
 
 </body>

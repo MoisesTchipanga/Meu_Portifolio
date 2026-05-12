@@ -112,10 +112,6 @@
 
 .profile-img:hover {
     transform: scale(1.03);
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    -o-transform: scale(1.03);
 }
 
 .border-animation {
