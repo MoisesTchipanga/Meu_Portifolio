@@ -37,7 +37,7 @@
                     <div class="hero-text">
                         <h5 style="color: var(--primary-color); font-family: monospace;">Hi, my name is</h5>
                         <h1 style="font-size: 4rem; color: #e6f1ff;" class="text-gradient">Moisés Tchipanga.</h1> 
-                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1.2;">Eu conecto <span id="typewriter" class="text-gradient"></span></h2> 
+                        <h2 style="font-size: 2.2rem; color: var(--text-dim); line-height: 1.2;">Eu conecto <span id="typewriter" class="text-gradient"></span></h2> 
                         <p style="max-width: 540px; margin-top: 20px;">Sou estudante de Engenharia Informática e apaixonado por tecnologia. A curiosidade guia o meu percurso, e é através dela que aprendo, experimento e construo projetos que refletem a minha evolução contínua.</p> 
                         <div class="hero-buttons">
                             <a href="portifolio.html" class="btn-primary">Check out my work!</a>
@@ -98,11 +98,11 @@
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pausa no final da frase
+                typeSpeed = 1500; // Pausa reduzida para uma troca mais dinâmica
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 500;
+                typeSpeed = 400; // Início da próxima frase ligeiramente mais rápido
             }
             setTimeout(type, typeSpeed);
         }
