@@ -21,15 +21,22 @@
 
 body {
     background-color: var(--secondary-color);
-    /*Adicionaglowssutisnoscantosparasuavizarovisualecriarprofundidade*/background-image:         radial-gradient(circle at 100% 0%, var(--accent-color) 0%, transparent 50%),        radial-gradient(circle at 0% 100%, var(--accent-color) 0%, transparent 50%);
+    /* Adiciona glows sutis nos cantos para suavizar o visual */
+    background-image: 
+        radial-gradient(circle at 100% 0%, var(--accent-color) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, var(--accent-color) 0%, transparent 50%);
     background-attachment: fixed;
-    /*Mantémoefeitodeluzfixoenquantovocêrola*/color: var(--text-color);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
     padding-top: var(--header-height);
     /*Accountforfixedheader*/scroll-behavior: smooth;
     /*Transiçãodeentradasuaveaocarregarapágina*/animation: pageEntrance 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
     -webkit-animation: pageEntrance 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+p {
+    text-align: justify;
 }
 
 @keyframes pageEntrance {

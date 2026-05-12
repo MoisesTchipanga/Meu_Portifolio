@@ -37,8 +37,8 @@
                     <div class="hero-text">
                         <h5 style="color: var(--primary-color); font-family: monospace;">Hi, my name is</h5>
                         <h1 style="font-size: 4rem; color: #e6f1ff;" class="text-gradient">Moisés Tchipanga.</h1> 
-                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1;">I build impactful web solutions.</h2> 
-                        <p style="max-width: 540px; margin-top: 20px;">Como estudante de Engenharia Informática e especialista em Hardware, transformo ideias em experiências digitais robustas. Minha paixão reside em desenvolver soluções web inovadoras que impulsionam o progresso e a eficiência.</p> 
+                        <h2 style="font-size: 3rem; color: var(--text-dim); line-height: 1.2;">Eu conecto <span id="typewriter" class="text-gradient"></span></h2> 
+                        <p style="max-width: 540px; margin-top: 20px;">Sou estudante de Engenharia Informática e apaixonado por tecnologia. A curiosidade guia o meu percurso, e é através dela que aprendo, experimento e construo projetos que refletem a minha evolução contínua.</p> 
                         <div class="hero-buttons">
                             <a href="portifolio.html" class="btn-primary">Check out my work!</a>
                         </div>
@@ -70,6 +70,43 @@
                 profileContainer.style.transform = 'translateY(0)';
             }
         });
+
+        // Lógica do Efeito de Digitação (Typewriter)
+        const textElement = document.getElementById('typewriter');
+        const phrases = [
+            "pessoas à tecnologia",
+            "ideias à prática",
+            "ensino à evolução",
+            "projetos à realidade"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pausa no final da frase
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+            setTimeout(type, typeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', type);
     </script>
     <footer class="footer">
         <div class="container">

@@ -58,6 +58,22 @@
     gap: 25px;
 }
 
+/* Efeito de Cursor para o Typewriter */
+#typewriter::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+     /* Sobrescreve o gradient no cursor */:;
+    -webkit-animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 /* IMAGEM DE PERFIL ANIMADA */
 .profile-img-container {
     position: relative;
@@ -80,6 +96,10 @@
     filter: blur(100px);
     opacity: 0.15;
     z-index: -1;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .profile-img {
@@ -92,6 +112,10 @@
 
 .profile-img:hover {
     transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
 }
 
 .border-animation {
