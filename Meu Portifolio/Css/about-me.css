@@ -120,12 +120,12 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(100, 255, 218, 0.2);
     animation: borderGlow 4s infinite ease-in-out;
-    /* Filtros para neutralizar o azul excessivo e dar mais vida à foto */
-    filter: brightness(1.1) contrast(1.1) saturate(1.1) sepia(0.1);
+    /*Filtrosparaneutralizaroazulexcessivoedarmaisvidaàfoto*/filter: brightness(1.1) contrast(1.1) saturate(1.1) sepia(0.1);
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    -webkit-filter: brightness(1.1) contrast(1.1) saturate(1.1) sepia(0.1);
 }
 
 .profile-img:hover {
