@@ -65,8 +65,7 @@
     margin-left: 5px;
     color: var(--primary-color);
     -webkit-text-fill-color: var(--primary-color);
-     /* Sobrescreve o gradient no cursor */:;
-    -webkit-animation: blink 0.7s infinite;
+    /* Sobrescreve o gradient no cursor */
 }
 
 @keyframes blink {
@@ -96,10 +95,6 @@
     filter: blur(100px);
     opacity: 0.15;
     z-index: -1;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 .profile-img {
@@ -114,9 +109,6 @@
 
 .profile-img:hover {
     transform: scale(1.03);
-}
-
-.border-animation {
 }
 
 /* RESPONSIVIDADE */
