@@ -64,8 +64,8 @@
         window.addEventListener('scroll', () => {
             const scrollValue = window.scrollY;
             if (profileContainer && window.innerWidth > 768) {
-                // Multiplicador 0.12 para um movimento sutil e elegante
-                profileContainer.style.transform = `translateY(${scrollValue * 0.12}px)`;
+                // Usando valor negativo para evitar que a imagem "empurre" o rodapé
+                profileContainer.style.transform = `translateY(${scrollValue * -0.05}px)`;
             } else if (profileContainer) {
                 profileContainer.style.transform = 'translateY(0)';
             }

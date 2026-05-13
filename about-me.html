@@ -117,7 +117,8 @@
         window.addEventListener('scroll', () => {
             const scrollValue = window.scrollY;
             if (profileContainer && window.innerWidth > 768) {
-                profileContainer.style.transform = `translateY(${scrollValue * 0.1}px)`;
+                // Ajustado para valor negativo para manter a integridade do layout
+                profileContainer.style.transform = `translateY(${scrollValue * -0.05}px)`;
             } else if (profileContainer) {
                 profileContainer.style.transform = 'translateY(0)';
             }
