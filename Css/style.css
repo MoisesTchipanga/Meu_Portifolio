@@ -65,50 +65,11 @@
     margin-left: 5px;
     color: var(--primary-color);
     -webkit-text-fill-color: var(--primary-color);
-    /* Sobrescreve o gradient no cursor */
 }
 
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-}
-
-/* IMAGEM DE PERFIL ANIMADA */
-.profile-img-container {
-    position: relative;
-    width: 450px;
-    height: auto; /* Altura automática para manter proporção */
-    flex-shrink: 0; /* Não encolher a imagem */
-    will-change: transform;
-}
-
-/* Aura de luz atrás da foto */
-.profile-img-container::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background: var(--primary-color);
-    filter: blur(100px);
-    opacity: 0.15;
-    z-index: -1;
-}
-
-.profile-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px; /* Borda retangular sutil */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    animation: borderGlow 4s infinite ease-in-out;
-}
-
-.profile-img:hover {
-    transform: scale(1.03);
 }
 
 /* RESPONSIVIDADE */
@@ -123,22 +84,13 @@
     }
 }
 
-@media (max-width: 992px) {
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-    
-    .profile-img-container {
-        width: 300px;
-        height: auto;
-    }
-}
-
 @media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px;
+    }
     .hero-content {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 40px;
         padding-top: 60px; /* Ajuste para o header fixo */
         padding: 60px 0;
     }
@@ -156,11 +108,11 @@
     }
     
     .profile-img-container {
-        width: 250px;
+        width: 280px;
         height: auto;
         margin: 0 auto;
     }
-    
+
     .menu {
         gap: 15px;
     }
